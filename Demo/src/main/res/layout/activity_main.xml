@@ -1,0 +1,66 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#FFFFFF"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_below="@+id/calendar_shadow_layer"
+        android:layout_width="match_parent"
+        android:layout_marginTop="-100dp"
+        android:background="#FF0000"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="1131"
+            android:layout_marginTop="100dp" />
+
+    </RelativeLayout>
+
+    <com.youloft.demo.SwipeLayout
+        android:id="@+id/swap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content">
+
+            <com.youloft.widgets.CalendarView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:tag="value"
+                android:paddingLeft="2dp"
+                android:background="@drawable/bg_calendar_data_grid" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.youloft.widgets.CalendarView
+                android:tag="value"
+                android:paddingLeft="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_calendar_data_grid" />
+        </FrameLayout>
+
+    </com.youloft.demo.SwipeLayout>
+
+    <ImageView
+        android:id="@+id/calendar_shadow_layer"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_below="@+id/swap"
+        android:background="@drawable/shadow_calendar"
+        android:scaleType="fitXY"
+        android:visibility="visible" />
+
+
+</RelativeLayout>

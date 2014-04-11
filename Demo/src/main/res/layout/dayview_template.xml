@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/dayview_lady"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:visibility="invisible" />
+
+    <RelativeLayout
+        android:id="@+id/dayview_date_layout"
+        android:layout_below="@id/dayview_lady"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/dayview_solar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16dp"
+            android:layout_alignParentLeft="true"
+            android:text="28"
+            android:textStyle="bold"
+            android:includeFontPadding="false"
+            android:singleLine="true"
+            android:ems="1"
+            android:textColor="#FF333333" />
+
+        <TextView
+            android:id="@+id/dayview_lunar"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="8dp"
+            android:text="初二"
+            android:singleLine="true"
+            android:ems="2"
+            android:layout_alignBottom="@id/dayview_solar"
+            android:includeFontPadding="false"
+            android:textColor="#FF333333"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/dayview_event"
+        android:layout_width="match_parent"
+        android:layout_height="4dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/dayview_festive"
+        android:layout_width="match_parent"
+        android:layout_below="@id/dayview_date_layout"
+        android:layout_above="@id/dayview_event"
+        android:textSize="7dp"
+        android:text="中华人民共和国"
+        android:textColor="#FF0000"
+        android:gravity="center"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/dayview_extra"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="invisible"
+        android:scaleType="fitCenter"
+        android:layout_alignParentRight="true" />
+</merge>
